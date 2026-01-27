@@ -13,6 +13,7 @@ def create_app(config= config_dict['development']):
     from .resources.todo import TodoResource, TodoListResource
     api.add_resource(TodoListResource, '/todos')
     api.add_resource(TodoResource, '/todos/<int:todo_id>')
+    
 
     # TODO: Create all tables within the app context
     with app.app_context():

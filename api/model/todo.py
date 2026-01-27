@@ -12,4 +12,9 @@ class Todo(db.Model):
 
     # TODO: Implement to_dict() method for JSON serialization
     def to_dict(self):
-        pass
+        return{
+            "title": self.title,
+            "description":self.description,
+            "completed":self.completed,
+            "created_at":self.created_at.isoformat()
+        }
