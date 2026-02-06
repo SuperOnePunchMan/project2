@@ -3,7 +3,7 @@ from flask_restful import Api
 from .config.config import config_dict
 from .config.db import db
 
-def create_app(config= config_dict['development']):
+def create_app(config= config_dict['production']):
     app = Flask(__name__)
     app.config.from_object(config)
     db.init_app(app)
